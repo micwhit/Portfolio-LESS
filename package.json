@@ -1,0 +1,12 @@
+{
+  "name": "smaple",
+  "version": "1.0.0",
+  "description": "Test for using grunt for processing LESS",
+  "author": "Mike W",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1"
+  }
+}
