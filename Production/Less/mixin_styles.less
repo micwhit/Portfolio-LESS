@@ -1,0 +1,76 @@
+/* #Intro
+================================================== */
+
+.social-media(@background-img:none) {
+  background: url(@background-img) no-repeat 0 0;
+}
+
+.social-media(@_){
+  width: 25px;
+  height: 26px;
+  display: inline-block;
+}
+
+.brief-header{
+  color:#fff;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  text-align:center;
+  filter: dropshadow(color=rgba(0, 0, 0, 0.5), offx=1, offy=1);
+}
+
+#brief {
+  margin-top:190px;
+  h1, h2, h3 {
+    .brief-header
+  }
+}
+
+#brief h3 {border-bottom:0;}
+
+header {
+	padding-bottom:200px;
+}
+
+.social {
+	width: 100%;
+	text-align: center;
+  ul li {
+  	float:left;
+  	margin: 0 8px 0 8px;
+  }
+  &::after{
+    content:'';
+    display:block;
+    clear:both;
+  }
+}
+
+.facebook {
+.social-media('../img/icn-facebook.png');
+}
+
+.twitter {
+  .social-media('../img/icn-twitter.png');
+}
+
+.dribbble {
+  .social-media('../img/icn-dribbble.png');
+}
+
+.linkedin {
+  .social-media('../img/icn-linkedin.png');
+}
+
+.meter-width (@m-width:0){
+   width:@m-width;
+}
+
+.meter-margin(@_){
+  margin: 6px 0 12px 0;
+}
+
+#html .meter {.meter-width (@m-width:80%);}
+ #css .meter {.meter-width (@m-width:90%); }
+ #js .meter {.meter-width (@m-width:80%); }
+ #bs .meter {.meter-width (@m-width:60%); }
+ #pshop .meter { .meter-width (@m-width:90%); }

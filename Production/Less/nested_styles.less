@@ -1,0 +1,287 @@
+.clear-it {
+  content:''; display:block; clear:both; zoom:1;
+}
+
+section {
+  &::after {
+    .clear-it
+  }
+}
+
+
+/* #Navigation
+================================================== */
+nav {
+  &::after {
+    .clear-it
+  }
+}
+
+nav {
+    background-color: rgba(0,0,0,.65);
+    position: relative;
+    padding: 10px 0 20px 0;
+	  height:auto;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    	 float:right;
+       li {
+           float: left;
+           a {
+              display: inline-block;
+              color: #fff;
+              padding: 10px 20px;
+              text-decoration: none;
+              width: 125px;
+              position: relative;
+             font-size:1.125em;
+
+               &.mobile_menu {
+               width:32px; height:32px;
+               background: url(../img/icon_menu.svg) no-repeat 0 0;
+               background-size:contain;
+               position:absolute;
+               top:-20px;
+               left:50%;
+               margin-left:-16px;
+               display:none;
+               }
+          }
+       }
+    }
+}
+
+
+
+/* #Work
+================================================== */
+
+.mac {position:relative; float:left; width:350px;}
+.imac {
+	background: url(../img/imac.png);
+	width: 459px;
+	height: 349px;
+	position: relative;
+}
+
+.slide-opacity (@opacity:1s) {
+  -webkit-transition: opacity @opacity ease-in-out;
+  -moz-transition: opacity @opacity ease-in-out;
+  -o-transition: opacity @opacity ease-in-out;
+  transition: opacity @opacity ease-in-out;
+}
+
+.slides img {
+  position:absolute;
+  width:425px; top:18px; left:18px;
+  .slide-opacity(1s);
+  &:hover {
+    opacity:0;
+  }
+}
+
+.layout-position(@float:left){
+  display:inline-block; float:@float;
+}
+
+.portfolio {clear:both;
+  &::after{
+    .clear-it
+  }
+  h3 {
+  	margin-top: 40px;
+  }
+}
+
+p.proj-name {
+	border-bottom: 1px solid #bebebe;
+	padding-bottom: 2px;
+	margin-bottom: 0;
+	color: #363636;
+
+  &::after{
+    .clear-it
+  }
+  span {
+     .layout-position(left); font-weight:400;
+  }
+  a {
+    .layout-position(right); color:green;
+  }
+}
+
+p.proj-desc {
+	line-height: normal;
+	font-size: 13px;
+	margin-top: 6px;
+	margin-bottom: 35px;
+	color: #696969;
+}
+
+section#work article{
+    & > div {
+    float:left;
+    width:32%;
+    margin-top:1px;
+
+      &:first-child{
+        margin-right:1.95%;
+      }
+      &:last-child{
+        margin-left: 1.95%;
+      }
+  }
+  img {display:block; width:95%; border:5px solid #dddddb;}
+}
+
+.tint {
+	position: relative;
+	cursor: pointer;
+	margin:0;
+
+  &:before {
+  	content: "";
+  	display: block;
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	background: rgba(0,0,0, 0.2);
+  	-moz-transition: background .3s linear;
+  	-webkit-transition: background .3s linear;
+  	-o-transition: background .3s linear;
+  	transition: background .3s linear;
+  }
+
+  &:hover:before {
+  	background: none;
+  }
+}
+
+section#work .feature-note article {
+  float:none; width:90%; padding-bottom:30px;
+  &::after{.clear-it}
+  div {width:23%; float:left; padding:0 1%;
+    span {display:block; text-align:center; font-weight:600;}
+  }
+  div.tech img{
+    border:0;
+  }
+}
+
+.launch-button {text-align:right;}
+
+ .top {margin-bottom:10px;}
+ .pagination-area a {margin:0 5px; font-weight:bold; color:#000;}
+
+ .fadeIn{
+	 opacity: 1;
+   .slide-opacity(.25s);
+ }
+
+ .fadeOut{
+   opacity: 0;
+  .slide-opacity(.25s);
+ }
+
+ /* #Services
+ ================================================== */
+ section#services div.my-service {
+   float:left; width:32%; padding:5px;
+   img {
+     display:block;
+     margin:10px auto;
+   }
+   p {
+     text-align:center;
+   }
+ }
+
+ /* #About
+ ================================================== */
+ article.experience{
+   float:left;
+   width:45%;
+   font-weight:400;
+   &::after{
+     .clear-it;
+   }
+ }
+
+ article.skills {float:right; width:52%;}
+
+ section#about section {padding:5px 0;}
+
+ p.line2nd {
+     font-size: 13px;
+     line-height: normal;
+     color: #7f7f7f;
+     margin-bottom: 8px;
+ }
+
+ /* Experience */
+ .job-info {
+     &::after{
+       .clear-it;
+     }
+   }
+ .company {float:left; width:25%;}
+ .job-desc{float:right; width:70%;}
+
+
+ /*Skill */
+ .bar {padding-right:10px;}
+ .bar span {color:#fff; display:inline-block; float:right; }
+
+ .metric {background-color:#e7e7e7;}
+
+
+ #html .meter .bar,#css .meter .bar, #js .meter .bar, #bs .meter .bar,#pshop .meter .bar    {
+     background-color:#4f4f4f;
+     height: 25px;
+ }
+
+
+ /* #Logos
+ ================================================== */
+ .logos {
+   width:70%; margin:0 auto;
+   &::after{.clear-it;}
+   figure {display:inline-block; float:left; margin:15px 10px; }
+   .dcm {width:120px; height:auto;}
+   .ifcj {width:195px; height:auto;}
+   .er {width:115px; height:auto;}
+ }
+
+ /* #Contact
+ ================================================== */
+
+ #contact span.line3 { background: #fff; width: 320px;}
+
+ section#contact  h2, section#contact   {color:#fff;}
+
+ div#googleMap {float:right;}
+
+ .contact-info{
+   width:250px; float:left;
+   span {
+     display:block;
+     img {margin-right:20px;}
+   }
+ }
+
+ /* #Footer
+ ================================================== */
+ footer {
+   background-color:#000; color:#fff; padding:20px 30px;
+     div {font-size:.75em;
+       font-weight:400;
+       width:400px;
+       margin:0 auto;
+     }
+ }
+
+ section#contact div#googleMap {width:500px; height:230px;}
